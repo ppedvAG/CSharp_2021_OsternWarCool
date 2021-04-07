@@ -1,0 +1,20 @@
+﻿Projektmappe (.sln)
+	- Projekt (.csproj/.vbproj) -> Assembly (.exe/.dll/.xap)
+		- References [.NET Framework (alt)] / Dependencies [.NET core (neu)]
+		- App.config -> [ASSEMBLYNAME].exe.config
+		- Resources (z.b. Icon,Bilder, Sound, Dateien)
+			- .RESX -> Übersetzung
+		- Quellcodedateien (.cs/.vb)
+			- Namespace
+				- Interface
+				- Delegate
+				- Stucts
+				- Enum
+				- Klassen (Interface, Structs)
+					- Felder
+					- Property
+					- Methoden / Funktionen
+					- Konstruktor / Destruktor
+					- Event
+
+		

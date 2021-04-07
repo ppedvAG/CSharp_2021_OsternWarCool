@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MeinKlassen;
+using System;
+
 
 namespace ValueTypeVsReferenceType
 {
@@ -9,13 +10,19 @@ namespace ValueTypeVsReferenceType
         {
             Console.WriteLine("Hello World!");
 
+#if DEBUG
+            Console.WriteLine("DEBUG VERSION !!!");
+#endif
+
+
             int zahl = 16;
             Verdoppeln(zahl);
             Console.WriteLine(zahl);
 
             decimal geld = 9843597843598m;
 
-            Auto meinAuto = null;
+            MeinKlassen.Auto meinAuto = null;
+
             meinAuto = new Auto();
             meinAuto.Farbe = "gelb";
 
@@ -49,9 +56,7 @@ namespace ValueTypeVsReferenceType
     }
 
 
-    class Auto
-    {
-        public int PS { get; set; }
-        public string Farbe { get; set; }
-    }
+
 }
+
+
