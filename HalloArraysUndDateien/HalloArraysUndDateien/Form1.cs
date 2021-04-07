@@ -91,7 +91,7 @@ namespace HalloArraysUndDateien
                 var reader = new System.IO.StreamReader(openFileDialog.FileName);
 
                 while (!reader.EndOfStream)
-                {
+                { 
                     var line = reader.ReadLine();
                     var chunks = line.Split(',');
                     
@@ -107,7 +107,15 @@ namespace HalloArraysUndDateien
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 BackColor = colorDialog1.Color;
+
+                Properties.Settings.Default.Farbe = colorDialog1.Color;
+                Properties.Settings.Default.Save();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            BackColor = Properties.Settings.Default.Farbe;
         }
     }
 }
