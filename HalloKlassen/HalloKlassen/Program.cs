@@ -19,17 +19,18 @@ namespace HalloKlassen
             Auto meinAuto; //deklaration
             meinAuto = new Auto(); //instanzierung
 
-            Auto meinAuto2 = new Auto(); //deklaration + instanzierung
+            Auto meinAuto2 = new Auto("rosa"); //deklaration + instanzierung
 
-            meinAuto.Farbe = "blau";
+            //meinAuto.Farbe = "blau";
             meinAuto.Hersteller = "Baudi";
             meinAuto.Modell = "g9";
-            meinAuto.PS = 873;
+            //meinAuto.PS = 873;
+            meinAuto.SetPS(-873);
 
-            meinAuto2.Farbe  = "gelb";
+            //meinAuto2.Farbe  = "gelb";
             meinAuto2.Hersteller = "Bercedes";
-            meinAuto2.Modell = "m99";
-            meinAuto2.PS = 200;
+            meinAuto2.Modell = "   ";
+            //meinAuto2.PS = 200;
             
 
             ZeigeAuto(meinAuto);
@@ -37,11 +38,13 @@ namespace HalloKlassen
 
             meinAuto.Hupen();
             meinAuto2.Hupen();
+            
+          
         }
 
         static void ZeigeAuto(Auto einAuto)
         {
-            Console.WriteLine($"{einAuto.Hersteller} {einAuto.Modell} {einAuto.Farbe} {einAuto.PS}PS");
+            Console.WriteLine($"{einAuto.Hersteller} {einAuto.Modell} {einAuto.Farbe} {einAuto.GetPS()}PS");
         }
 
         static void SagHallo() //einfache Methode (überladen)

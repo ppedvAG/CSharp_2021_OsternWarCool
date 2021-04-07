@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="33.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="HalloKlassen">
+      <HintPath>..\..\HalloKlassen\HalloKlassen\bin\Debug\net5.0\HalloKlassen.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

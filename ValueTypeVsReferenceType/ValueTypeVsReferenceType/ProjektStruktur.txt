@@ -11,10 +11,14 @@
 				- Stucts
 				- Enum
 				- Klassen (Interface, Structs)
-					- Felder
-					- Property
-					- Methoden / Funktionen
-					- Konstruktor / Destruktor
+					- ✔ Felder
+					- ✔ Property
+					- ✔ Methoden / Funktionen
+					- ✔ Konstruktor / Destruktor
 					- Event
 
-		
+public
+internal
+_protected internal
+_protected
+private
