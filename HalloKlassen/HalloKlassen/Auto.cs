@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace HalloKlassen
 {
-    class Auto
+    internal class Auto
     {
         public string Hersteller;
         public string Modell;
         public int PS;
-        public string Farbe;
+        internal string Farbe;
+
+        private bool innenBeleuchtung ;//false  
+
+        public void Hupen()
+        {
+            Console.Beep(1000 - PS, 200);
+
+            innenBeleuchtung = !innenBeleuchtung;
+        }
     }
 }
