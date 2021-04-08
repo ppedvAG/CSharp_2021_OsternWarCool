@@ -30,18 +30,9 @@ namespace DVDScreensaver
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.myButton1 = new DVDScreensaver.MyButton();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(120, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 131);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "DVD";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // timer1
             // 
@@ -49,13 +40,22 @@ namespace DVDScreensaver
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // myButton1
+            // 
+            this.myButton1.Location = new System.Drawing.Point(460, 261);
+            this.myButton1.Name = "myButton1";
+            this.myButton1.Size = new System.Drawing.Size(298, 131);
+            this.myButton1.TabIndex = 1;
+            this.myButton1.Text = "DVD";
+            this.myButton1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1128, 646);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.myButton1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -63,9 +63,8 @@ namespace DVDScreensaver
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private MyButton myButton1;
     }
 }
 

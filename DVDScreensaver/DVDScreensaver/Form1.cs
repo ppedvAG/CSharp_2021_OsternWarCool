@@ -141,23 +141,23 @@ namespace DVDScreensaver
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (button1.Right >= ClientRectangle.Width || button1.Left <= 0)
+            if (myButton1.Right >= ClientRectangle.Width || myButton1.Left <= 0)
             {
                 speedX *= -1;
                 Task.Run(() => Console.Beep(300, 100));
             }
 
-            button1.Left += speedX;
+            myButton1.Left += speedX;
 
-            if (button1.Bottom >= ClientRectangle.Height || button1.Top <= 0)
+            if (myButton1.Bottom >= ClientRectangle.Height || myButton1.Top <= 0)
             {
                 speedY *= -1;
                 Task.Run(() => Console.Beep(300, 100));
             }
 
-            button1.Top += speedY;
+            myButton1.Top += speedY;
 
-            Text = $"{button1.Left}x{button1.Top}";
+            Text = $"{myButton1.Left}x{myButton1.Top}";
         }
     }
 }

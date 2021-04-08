@@ -24,7 +24,7 @@ namespace HalloVererbung
             pat.Diagnose = "Q18.3 Flügelfell des Halses";
             pat.Arzt = a;
             pat.GebDatum = new DateTime(2005, 12, 14);
-
+            
             ShowPerson(p);
             ShowPatient(pat);
 
@@ -35,6 +35,8 @@ namespace HalloVererbung
             Show(pat);
             Show(17);
             Show(new ApplicationException());
+
+            Console.WriteLine(pat.ToString());
         }
 
         static void Show(Object o)
@@ -64,7 +66,7 @@ namespace HalloVererbung
             //3. pattern matching (C# 7.0 ab 2016) - cool 👍
             if (person is Arzt personAlsArztPM)
             {
-                Console.WriteLine("\tDas ist ein Arzt [pattern-matching]");
+                Console.WriteLine($"\tDas ist ein Arzt [pattern-matching] [{personAlsArztPM.CalcAge()}]");
             }
         }
 

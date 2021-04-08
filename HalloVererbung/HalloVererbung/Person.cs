@@ -16,7 +16,9 @@ namespace HalloVererbung
         /// </summary>
         public string Name { get; set; }
         public DateTime GebDatum { get; set; }
-        public string Anschrift { get; set; }
+        protected string Anschrift { get; set; }
+
+
 
         public Person(string name)
         {
@@ -27,7 +29,7 @@ namespace HalloVererbung
         /// Gibt das berechnete Alter der Person zurück
         /// </summary>
         /// <returns>Alter der Person</returns>
-        public int CalcAge()
+        public virtual int CalcAge()
         {
             //Quelle: https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-based-on-a-datetime-type-birthday
 
