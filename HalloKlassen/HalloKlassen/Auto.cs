@@ -9,8 +9,8 @@ namespace HalloKlassen
     public class Auto
     {
         public string Besitzer { get; set; } //AutoProperty
-
         public string Hersteller { get; set; } //AutoProperty
+
 
         private string modell; //backing field
         public string Modell //das FullProperty

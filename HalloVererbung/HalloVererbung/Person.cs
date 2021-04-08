@@ -6,35 +6,38 @@ using System.Threading.Tasks;
 
 namespace HalloVererbung
 {
-    public class Person
+    /// <summary>
+    /// Repräsentiert eine Person  
+    /// </summary>
+    public class Person : Object
     {
+        /// <summary>
+        /// Der Name der Person
+        /// </summary>
         public string Name { get; set; }
         public DateTime GebDatum { get; set; }
         public string Anschrift { get; set; }
 
+        /// <summary>
+        /// Gibt das berechnete Alter der Person zurück
+        /// </summary>
+        /// <returns>Alter der Person</returns>
         public int CalcAge()
         {
-            return -1;//todo
+            //Quelle: https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-based-on-a-datetime-type-birthday
+
+            // Save today's date.
+            var today = DateTime.Today;
+
+            // Calculate the age.
+            var age = today.Year - GebDatum.Year;
+
+            // Go back to the year in which the person was born in case of a leap year
+            if (GebDatum.Date > today.AddYears(-age))
+                age--;
+
+            return age;
         }
-    }
-
-    public class Arzt : Person
-    {
-        public string Fachrichtung { get; set; }
-        public int ArztNummer { get; set; }
-    }
-
-    public class Mitarbeiter : Person
-    {
-        public DateTime Einstellungsdatum { get; set; }
-        public string Job { get; set; }
-    }
-
-    public class Patient : Person
-    {
-        public int Patientennummer { get; set; }
-        public string Diagnose { get; set; }
-        public Arzt Arzt { get; set; }
 
     }
 }

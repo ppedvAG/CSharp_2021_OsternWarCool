@@ -47,6 +47,15 @@ namespace AutosInGrid
 
             dataGridView1.DataSource = autoListe;
 
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if( dataGridView1.CurrentRow.DataBoundItem is Auto auto)
+            {
+                MessageBox.Show(auto.Hersteller);
+            }
         }
     }
 }
