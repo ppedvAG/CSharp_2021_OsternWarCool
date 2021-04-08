@@ -6,5 +6,15 @@
         public string Diagnose { get; set; }
         public Arzt Arzt { get; set; }
 
+        public Patient() : this("***Anonym***")
+        {
+
+        }
+
+        public Patient(string name) : base(name)
+        {
+
+        }
+
     }
 }

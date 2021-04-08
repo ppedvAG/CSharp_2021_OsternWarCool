@@ -18,6 +18,11 @@ namespace HalloVererbung
         public DateTime GebDatum { get; set; }
         public string Anschrift { get; set; }
 
+        public Person(string name)
+        {
+            Name = name;
+        }
+
         /// <summary>
         /// Gibt das berechnete Alter der Person zurück
         /// </summary>

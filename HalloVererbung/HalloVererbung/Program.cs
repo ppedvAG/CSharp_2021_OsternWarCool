@@ -8,20 +8,16 @@ namespace HalloVererbung
         {
             Console.WriteLine("Hello World!");
 
-            Person p = new Person() { Name = "Peter", GebDatum = new DateTime(1990, 8, 15) };
+            Person p = new Person("Peter") { GebDatum = new DateTime(1990, 8, 15) };
 
-            Arzt a = new Arzt();
-            a.Name = "Anton";
+            Arzt a = new Arzt("Anton");
             a.ArztNummer = 1;
             a.Fachrichtung = "Allgemein";
             a.GebDatum = new DateTime(1974, 1, 29);
 
-            Mitarbeiter m = new Mitarbeiter();
-            m.Name = "Marta";
-            m.Einstellungsdatum = DateTime.Now.AddDays(-302);
+            Mitarbeiter m = new Mitarbeiter("Marta", DateTime.Now.AddDays(-302));
             m.Job = "Rezeption";
             m.GebDatum = new DateTime(2002, 4, 4);
-
 
             Patient pat = new Patient();
             pat.Name = "Paula";
