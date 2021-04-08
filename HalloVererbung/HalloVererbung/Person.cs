@@ -16,7 +16,7 @@ namespace HalloVererbung
         /// </summary>
         public string Name { get; set; }
         public DateTime GebDatum { get; set; }
-        protected string Anschrift { get; set; }
+        public string Anschrift { get; set; }
 
 
 

@@ -7,12 +7,13 @@ namespace HalloVererbung
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine($"{DateTime.Now.DayOfWeek}");
 
             Person p = new Person("Peter") { GebDatum = new DateTime(1990, 8, 15) };
 
             Arzt a = new Arzt("Anton");
             a.ArztNummer = 1;
-            a.Fachrichtung = "Allgemein";
+            a.Fachrichtung = Fachrichtung.Augenheilkunde;
             a.GebDatum = new DateTime(1974, 1, 29);
 
             Mitarbeiter m = new Mitarbeiter("Marta", DateTime.Now.AddDays(-302));
@@ -24,7 +25,7 @@ namespace HalloVererbung
             pat.Diagnose = "Q18.3 Flügelfell des Halses";
             pat.Arzt = a;
             pat.GebDatum = new DateTime(2005, 12, 14);
-            
+
             ShowPerson(p);
             ShowPatient(pat);
 
@@ -66,7 +67,9 @@ namespace HalloVererbung
             //3. pattern matching (C# 7.0 ab 2016) - cool 👍
             if (person is Arzt personAlsArztPM)
             {
-                Console.WriteLine($"\tDas ist ein Arzt [pattern-matching] [{personAlsArztPM.CalcAge()}]");
+                Console.WriteLine($"\tDas ist ein Arzt [pattern-matching] [{personAlsArztPM.CalcAge()}] {personAlsArztPM.Fachrichtung} {(int)personAlsArztPM.Fachrichtung}");
+                if (personAlsArztPM.Fachrichtung == Fachrichtung.Augenheilkunde)
+                    Console.WriteLine($"\tTranslation: EyehealingCustomer");
             }
         }
 
