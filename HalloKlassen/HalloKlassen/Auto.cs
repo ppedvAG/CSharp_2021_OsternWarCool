@@ -25,8 +25,6 @@ namespace HalloKlassen
             }
         }
 
-
-
         private int PS; //manual. getter und setter (macht man nicht, dafür gibts properties)
 
         public int GetPS() //getter
