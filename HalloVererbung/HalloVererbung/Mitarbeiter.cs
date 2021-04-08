@@ -11,5 +11,12 @@ namespace HalloVererbung
         {
             Einstellungsdatum = einstellDatum;
         }
+
+        public override void Hupen()
+        {
+            Console.WriteLine("Ein Mitarbeiter der hupt");
+            Console.Beep(400, 200);
+            Console.Beep(500, 200);
+        }
     }
 }

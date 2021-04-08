@@ -1,4 +1,6 @@
-﻿namespace HalloVererbung
+﻿using System;
+
+namespace HalloVererbung
 {
 
     public enum Fachrichtung
@@ -23,6 +25,12 @@
             var orgAge = base.CalcAge();
             return orgAge - 5;
             //return 29;
+        }
+
+        public override void Hupen()
+        {
+            Console.WriteLine("Ein Arzt der hupt");
+            Console.Beep(300, 800);
         }
 
         public Arzt(string name) : base(name)

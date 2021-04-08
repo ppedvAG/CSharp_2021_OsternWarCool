@@ -9,7 +9,7 @@ namespace HalloVererbung
             Console.WriteLine("Hello World!");
             Console.WriteLine($"{DateTime.Now.DayOfWeek}");
 
-            Person p = new Person("Peter") { GebDatum = new DateTime(1990, 8, 15) };
+            //Person p = new Person("Peter") { GebDatum = new DateTime(1990, 8, 15) };
 
             Arzt a = new Arzt("Anton");
             a.ArztNummer = 1;
@@ -26,7 +26,7 @@ namespace HalloVererbung
             pat.Arzt = a;
             pat.GebDatum = new DateTime(2005, 12, 14);
 
-            ShowPerson(p);
+            //ShowPerson(p);
             ShowPatient(pat);
 
             ShowPerson(a); //impliziter downcast
@@ -49,6 +49,8 @@ namespace HalloVererbung
         static void ShowPerson(Person person)
         {
             Console.WriteLine($"Person: {person.Name} geboren am {person.GebDatum:d} [{person.CalcAge()}] aus {person.Anschrift}");
+
+            person.Hupen();
 
             //1. prüfen und casten [old style vor 2005] 👎
             if (person is Arzt) //typprüfung

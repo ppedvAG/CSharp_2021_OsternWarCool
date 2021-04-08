@@ -9,7 +9,7 @@ namespace HalloVererbung
     /// <summary>
     /// Repräsentiert eine Person  
     /// </summary>
-    public class Person : Object
+    public abstract class Person : Object
     {
         /// <summary>
         /// Der Name der Person
@@ -18,6 +18,8 @@ namespace HalloVererbung
         public DateTime GebDatum { get; set; }
         public string Anschrift { get; set; }
 
+
+        public abstract void Hupen();
 
 
         public Person(string name)
