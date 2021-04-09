@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloCam.Model", "HalloCam.Model\HalloCam.Model.csproj", "{40BFA41B-1779-4A1E-9FB2-02C38A7D7706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloCam.UI", "HalloCam.UI\HalloCam.UI.csproj", "{82991326-EC94-4CE9-9B39-588A9BC9FDD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{40BFA41B-1779-4A1E-9FB2-02C38A7D7706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40BFA41B-1779-4A1E-9FB2-02C38A7D7706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40BFA41B-1779-4A1E-9FB2-02C38A7D7706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82991326-EC94-4CE9-9B39-588A9BC9FDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82991326-EC94-4CE9-9B39-588A9BC9FDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82991326-EC94-4CE9-9B39-588A9BC9FDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82991326-EC94-4CE9-9B39-588A9BC9FDD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
