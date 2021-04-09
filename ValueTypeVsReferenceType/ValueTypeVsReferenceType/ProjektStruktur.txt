@@ -7,8 +7,8 @@
 		- Quellcodedateien (.cs/.vb)
 			- Namespace
 				- ✔ Interface
-				- Delegate
-				- Stucts
+				- ✔ Delegate
+				- ✔Stucts
 				- ✔ Enum
 				- Klassen (Interface, Structs)
 					- ✔ (abstract)
@@ -16,10 +16,12 @@
 					- ✔ Property
 					- ✔ Methoden / Funktionen
 					- ✔ Konstruktor / Destruktor
-					- Event
+					- ✔Event
 
 public
 internal
 _protected internal
 _protected
 private
+
+
