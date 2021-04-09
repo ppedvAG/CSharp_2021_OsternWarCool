@@ -2,7 +2,7 @@
 
 namespace HalloVererbung
 {
-    public class Patient : Person
+    public class Patient : Person, IKündbar
     {
         public int Patientennummer { get; set; }
         public string Diagnose { get; set; }
@@ -20,9 +20,27 @@ namespace HalloVererbung
             Console.Beep(400, 200);
         }
 
+        private bool isGekündigt;
+        public bool IsGekündigt
+        {
+            get { return isGekündigt; }
+            set { isGekündigt = value; }
+        }
+
+        public void Kündigen()
+        {
+            if(isGekündigt)
+                Console.WriteLine("Der Patient wurde bereits gekündigt");
+            else 
+            {
+                IsGekündigt = true;
+                Console.WriteLine($"Der Patient {Name} wurde gekündigt");
+            }
+        }
+
         public Patient() : this("***Anonym***")
         {
-           
+
         }
 
         public Patient(string name) : base(name)

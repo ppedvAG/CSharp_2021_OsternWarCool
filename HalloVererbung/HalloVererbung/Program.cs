@@ -37,6 +37,12 @@ namespace HalloVererbung
             Show(17);
             Show(new ApplicationException());
 
+
+            IKündbar dasIstKündbar = new Mitarbeiter("aa", DateTime.Now);
+            IKündbar dasIstKündbar2 = new Patient();
+            // IKündbar dasIstKündbar = new Arzt();
+
+
             Console.WriteLine(pat.ToString());
         }
 
@@ -49,6 +55,11 @@ namespace HalloVererbung
         static void ShowPerson(Person person)
         {
             Console.WriteLine($"Person: {person.Name} geboren am {person.GebDatum:d} [{person.CalcAge()}] aus {person.Anschrift}");
+
+            if (person is IKündbar ik)
+            {
+                Console.WriteLine($"\tDiese Person ist Kündbar. Kündigungsstatus: {ik.IsGekündigt}");
+            }
 
             person.Hupen();
 

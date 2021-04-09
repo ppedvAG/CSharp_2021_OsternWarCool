@@ -6,11 +6,12 @@
 			- .RESX -> Übersetzung
 		- Quellcodedateien (.cs/.vb)
 			- Namespace
-				- Interface
+				- ✔ Interface
 				- Delegate
 				- Stucts
-				- Enum
+				- ✔ Enum
 				- Klassen (Interface, Structs)
+					- ✔ (abstract)
 					- ✔ Felder
 					- ✔ Property
 					- ✔ Methoden / Funktionen
