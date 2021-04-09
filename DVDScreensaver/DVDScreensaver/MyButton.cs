@@ -8,8 +8,28 @@ using System.Windows.Forms;
 
 namespace DVDScreensaver
 {
+    public delegate void TribleClickDelegate(int clicks);
+
     public class MyButton : Button
     {
+        //public event EventHandler TribleClick;
+        public event TribleClickDelegate TribleClick;
+
+        int clickCount = 0;
+
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+            clickCount++;
+
+            if (clickCount % 3 == 0)
+            {
+                if (TribleClick != null)//wurde das Event aboniert?
+                    TribleClick.Invoke(clickCount);
+            }
+        }
+
+
         protected override void OnPaint(PaintEventArgs pevent)
         {
             //base.OnPaint(pevent);
@@ -21,7 +41,7 @@ namespace DVDScreensaver
 
             if (ClientRectangle.Contains(PointToClient(Cursor.Position)))
             {
-                var rect = ClientRectangle;             
+                var rect = ClientRectangle;
                 rect.Inflate(-5, -5);
                 pevent.Graphics.DrawEllipse(new Pen(Color.Aqua, 10), rect);
             }

@@ -16,6 +16,13 @@ namespace DVDScreensaver
         public Form1()
         {
             InitializeComponent();
+
+            myButton1.TribleClick += MyButton1_TribleClick;
+            myButton1.TribleClick += (int c) => { MessageBox.Show(c.ToString()); };
+            myButton1.TribleClick += (c) =>  MessageBox.Show(c.ToString());
+            myButton1.TribleClick += x =>  MessageBox.Show(x.ToString());
+
+            #region Tetrismelodi
             //Task.Run(() =>
             //{ // Tetris
             //    Console.Beep(658, 125);
@@ -134,6 +141,12 @@ namespace DVDScreensaver
             //    Console.Beep(880, 1000);
             //    Console.Beep(838, 2000);
             //});
+            #endregion
+        }
+
+        private void MyButton1_TribleClick(int clicks)
+        {
+            MessageBox.Show(clicks.ToString());
         }
 
         int speedX = 4;
@@ -159,5 +172,7 @@ namespace DVDScreensaver
 
             Text = $"{myButton1.Left}x{myButton1.Top}";
         }
+
+
     }
 }
